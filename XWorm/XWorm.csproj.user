@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Update="XWorm\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="XWorm\ACT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="XWorm\Builder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="XWorm\Chat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="XWorm\Clipboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="XWorm\Clipper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="XWorm\CustomOpen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="XWorm\DDosAttack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="XWorm\EditReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="XWorm\FilesSearcher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="XWorm\FM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="XWorm\Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="XWorm\Ftp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="XWorm\Fun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="XWorm\GListView0.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="XWorm\HApps.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="XWorm\Hash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="XWorm\HBrowser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="XWorm\Hosts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="XWorm\HRDP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="XWorm\INFO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="XWorm\Keylogger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="XWorm\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="XWorm\Maps.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="XWorm\MBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="XWorm\MIC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="XWorm\ngrok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="XWorm\Performance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="XWorm\Port.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="XWorm\ProcessV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="XWorm\Programs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="XWorm\Proxy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="XWorm\Ransomware.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="XWorm\Registry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="XWorm\RemoteDesktop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="XWorm\RunPE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="XWorm\ServiceManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="XWorm\Shell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="XWorm\Sound.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="XWorm\StartupManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="XWorm\TBotNotify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="XWorm\TcpConnectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="XWorm\ToolsBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="XWorm\TXT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="XWorm\VBCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="XWorm\VoiceChat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="XWorm\WebCam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="XWorm.Resources.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.TXT.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
