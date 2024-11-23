@@ -142,9 +142,7 @@ public class Hash : Form
 		}
 		catch (Exception ex)
 		{
-			ProjectData.SetProjectError(ex);
 			Debug.WriteLine(ex.Message);
-			ProjectData.ClearProjectError();
 		}
 	}
 
@@ -159,9 +157,7 @@ public class Hash : Form
 		}
 		catch (Exception ex)
 		{
-			ProjectData.SetProjectError(ex);
 			Debug.WriteLine(ex.Message);
-			ProjectData.ClearProjectError();
 		}
 	}
 }
